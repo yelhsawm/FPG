@@ -1,0 +1,29 @@
+﻿@model  Fpg.Core.Fixture
+
+@{
+    ViewBag.Title = "FixtureList";
+}
+
+<h2>FixtureList</h2>
+@Html.AntiForgeryToken()
+<fieldset>
+    <legend>Fixture</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeTeam)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeTeam)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AwayTeam)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AwayTeam)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
